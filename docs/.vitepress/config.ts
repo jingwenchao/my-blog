@@ -38,11 +38,11 @@ export default defineConfig({
       label: '目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jingwenchao/my-blog' }],
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao',
+      copyright: 'Copyright © 2024-present maomao',
     },
 
     lastUpdated: {
@@ -66,11 +66,11 @@ export default defineConfig({
 
     /*** 自定义配置 ***/
     visitor: {
-      badgeId: 'maomao1996.vitepress-nav-template',
+      badgeId: 'jingwenchao.my-blog',
     },
 
     comment: {
-      repo: 'maomao1996/vitepress-nav-template',
+      repo: 'jingwenchao/my-blog',
       repoId: 'R_kgDOJC09Jg',
       category: 'Announcements',
       categoryId: 'DIC_kwDOJC09Js4Cekn0',

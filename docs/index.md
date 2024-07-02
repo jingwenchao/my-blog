@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: 别听水星记
   text: 前端导航
-  tagline: 基于 VitePress 的个人前端导航页面模板
+  tagline: 你的指尖，拥有改变世界的力量
   image:
     src: /logo.png
     alt: 别听水星记

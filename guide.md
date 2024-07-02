@@ -18,14 +18,14 @@
 
 ```ts
 hero:
-  name: 别听水星记的 //左侧第一行
+  name: 茂茂的 //左侧第一行
   text: 个人前端导航  //左侧第二行
   tagline: 使用 VitePress 打造个人前端导航  //第三行小注内容
   image:
     src: /logo.png //页面大图地址（图像最好切圆后使用）
-    alt: 别听水星记
+    alt: 茂茂物语
   actions:  //跳转按钮，可按需增减
-    - text: 别听水星记
+    - text: 茂茂物语
       link: https://notes.fe-mm.com
     - text: 前端导航
       link: /nav/
@@ -51,7 +51,7 @@ features:
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '个人主页', link: 'https://fe-mm.com' }, //切行无影响
   {
-    text: '别听水星记', //显示文本
+    text: '茂茂物语', //显示文本
     link: 'https://notes.fe-mm.com', //链接
   },
 ]
