@@ -4,7 +4,7 @@ layoutClass: 'm-home-layout'
 
 hero:
   name: 别听水星记的
-  text: 前端导航
+  text: 个人博客
   tagline: 你的指尖，拥有改变世界的力量
   image:
     src: /logo.png
