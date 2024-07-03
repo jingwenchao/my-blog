@@ -54,7 +54,7 @@ export default {
         sayHello: false, // 不在控制台打印项目信息
         dockedPosition: 'left', // 桌面位置
         mobileDisplay: true, // 移动端是否展示
-        // primaryColor: 'red', // 主题色
+        primaryColor: '#00A9B0', // 主题色
         tips: {
           messageLine: 3, // 超出 3 行 省略
           copyTips: {
@@ -117,9 +117,9 @@ export default {
           {
             path: 'https://model.oml2d.com/HK416-1-normal/model.json',
             // scale: 0.15,
-            position: [-60, 0],
+            position: [-80, 0],
             stageStyle: {
-              width: 250,
+              width: 350,
               height: 480,
             },
           },
