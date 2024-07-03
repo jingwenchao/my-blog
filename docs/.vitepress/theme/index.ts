@@ -25,12 +25,15 @@ export default {
 
     return h(MLayout, props)
   },
-  enhanceApp({ app, router }: EnhanceAppContext) {
+  async enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
+
 
     app.provide('DEV', process.env.NODE_ENV === 'development')
 
+
     app.component('MNavLinks', MNavLinks)
+
 
     if (typeof window !== 'undefined') {
       watch(
@@ -42,6 +45,95 @@ export default {
           ),
         { immediate: true },
       )
+    }
+
+
+    if (!import.meta.env.SSR) {
+      const { loadOml2d } = await import('oh-my-live2d')
+      loadOml2d({
+        sayHello: false, // 不在控制台打印项目信息
+        dockedPosition: 'left', // 桌面位置
+        mobileDisplay: true, // 移动端是否展示
+        // primaryColor: 'red', // 主题色
+        tips: {
+          messageLine: 3, // 超出 3 行 省略
+          copyTips: {
+            // 复制时提示
+            message: [
+              '你复制了什么内容呢?记得注明出处哦~',
+              '主人，你要有出息了，有人复制你东西了~',
+            ],
+          },
+          idleTips: {
+            // 闲置时提示
+            wordTheDay(wordTheDayData) {
+              return `${wordTheDayData.hitokoto}    by.${wordTheDayData.from}`
+            },
+          },
+        },
+        statusBar: {},
+        menus: {
+          items: [
+            // {
+            //   id: 'Rest',
+            //   icon: 'icon-rest',
+            //   title: '休息',
+            //   onClick(oml2d): void {
+            //     oml2d.statusBarOpen('休息一会儿')
+            //     oml2d.stageSlideOut()
+            //   },
+            // },
+            {
+              id: 'SwitchModel',
+              icon: 'icon-switch',
+              title: '切换模型',
+              onClick(oml2d): void {
+                // actions ...
+                oml2d.loadNextModel()
+              },
+            },
+          ],
+        },
+        models: [
+          // {
+          //   path: 'https://model.oml2d.com/Kar98k-normal/model.json',
+          //   position: [-60, -10],
+          //   // scale: 0.08,
+          //   // motionPreloadStrategy: 'ALL',
+          //   stageStyle: {
+          //     width: 280,
+          //     height: 450,
+          //   },
+          // },
+          {
+            path: 'https://model.oml2d.com/HK416-2-normal/model.json',
+            // scale: 0.15,
+            position: [-60, -20],
+            stageStyle: {
+              width: 250,
+              height: 450,
+            },
+          },
+          {
+            path: 'https://model.oml2d.com/HK416-1-normal/model.json',
+            // scale: 0.15,
+            position: [-60, 0],
+            stageStyle: {
+              width: 250,
+              height: 480,
+            },
+          },
+          {
+            path: 'https://model.oml2d.com/Senko_Normals/senko.model3.json',
+            // scale: 0.15,
+            position: [-60, 160],
+            stageStyle: {
+              width: 250,
+              height: 450,
+            },
+          },
+        ],
+      })
     }
   },
 }
