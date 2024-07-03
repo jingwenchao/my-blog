@@ -64,7 +64,7 @@ export default {
               icon: 'icon-rest',
               title: '休息',
               onClick(oml2d): void {
-                oml2d.statusBarOpen('休息一会儿')
+                oml2d.statusBarOpen('休息一下')
                 oml2d.stageSlideOut()
               },
             },
