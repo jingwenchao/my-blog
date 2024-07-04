@@ -131,16 +131,6 @@ export default {
   },
 }
 
-setTimeout(() => {
-  const oml2dStage = document.querySelectorAll('canvas')
-  // if (oml2dStage) {
-  //   oml2dStage.style.display = 'block'
-  // }
-  oml2dStage.forEach((oml2dStage) => {
-    makeElementDraggable(oml2dStage)
-  })
-}, 1000)
-
 if (typeof window !== 'undefined') {
   // detect browser, add to class for conditional styling
   const browser = navigator.userAgent.toLowerCase()
@@ -168,26 +158,4 @@ function updateHomePageStyle(value: boolean) {
     homePageStyle.remove()
     homePageStyle = undefined
   }
-}
-
-// 函数：使元素可以拖动
-function makeElementDraggable(element: HTMLElement) {
-  let offsetX = 0, offsetY = 0, initialX = 0, initialY = 0;
-  const onMouseDown = (event: MouseEvent) => {
-    event.preventDefault();
-    initialX = event.clientX - offsetX;
-    initialY = event.clientY - offsetY;
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  };
-  const onMouseMove = (event: MouseEvent) => {
-    offsetX = event.clientX - initialX;
-    offsetY = event.clientY - initialY;
-    element.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-  };
-  const onMouseUp = () => {
-    document.removeEventListener('mousemove', onMouseMove);
-    document.removeEventListener('mouseup', onMouseUp);
-  };
-  element.addEventListener('mousedown', onMouseDown);
 }
