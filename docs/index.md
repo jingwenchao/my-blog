@@ -47,9 +47,9 @@ features:
     link: https://notes.fe-mm.com/pit/npm
     linkText: 踩坑记录
   - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
-    link: https://notes.fe-mm.com/mao
+    title: 个人经历
+    details: '慢慢来<br />答案就在这日复一日的生活里<small class="bottom-small">一个想躺平的小开发</small>'
+    link: /my/
 ---
 
 <style>
