@@ -9,7 +9,10 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   { text: 'mmPlayer', link: 'https://netease-music.fe-mm.com' },
   {
-    text: '个人笔记',
-    link: 'https://github.com/maomao1996/tampermonkey-scripts',
+    text: '笔记',
+    items: [
+      { text: 'JavaScript', link: '/notes/javascript/' },
+      { text: 'TypeScript', link: '/notes/typescript/' },
+    ]
   },
 ]
